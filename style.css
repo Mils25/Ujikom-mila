@@ -1,0 +1,140 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url(design\ estetik.jpg); /* Ganti dengan path gambar Anda */
+    background-size: cover; /* Membuat gambar memenuhi seluruh layar */
+    background-repeat: no-repeat; /* Gambar tidak diulang */
+    background-position: center; /* Gambar di tengah layar */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .title {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #ffd6e8;
+    text-shadow: 0px 0px 5px #ffffff;
+}
+
+/* Main styles */
+.main {
+    text-align: center;
+    margin: 100px auto;
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 70%);
+    animation: rotate 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.main nav a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.main nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.main nav span {
+    color: #ddd;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(to right, #6e45e2, #88d3ce);
+    font-size: 14px;
+    color: white;
+    border-top: 2px solid #ebedee;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
